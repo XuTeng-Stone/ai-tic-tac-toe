@@ -7,6 +7,7 @@ export default function Home() {
   const [isProcessing, setIsProcessing] = useState(false);
 
   // Check if there is a winner
+  // @ts-ignore
   const checkWinner = (squares) => {
     const lines = [
       [0, 1, 2], [3, 4, 5], [6, 7, 8], // Horizontal
