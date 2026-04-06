@@ -8,7 +8,7 @@ export default function Home() {
 
   // Check if there is a winner
   // @ts-ignore
-  const checkWinner = (squares) => {
+  const checkWinner = (squares: any) => {
     const lines = [
       [0, 1, 2], [3, 4, 5], [6, 7, 8], // Horizontal
       [0, 3, 6], [1, 4, 7], [2, 5, 8], // Vertical
@@ -26,7 +26,7 @@ export default function Home() {
   const winner = checkWinner(board);
   const isDraw = !winner && board.every((square) => square !== null);
 
-  const handleClick = async (index) => {
+  const handleClick = async (index: any) => {
     // Ignore click if the square is filled, AI is thinking, or the game is over
     if (board[index] || isProcessing || winner || isDraw) return;
 
